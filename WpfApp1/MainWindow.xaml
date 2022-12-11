@@ -19,11 +19,11 @@
                     <Button HorizontalAlignment="Left" Content="Регистрация" Background="#707ED7"></Button>
                     <Button HorizontalAlignment="Right" Content="Войти" Foreground="#707ED7" Style="{StaticResource MaterialDesignFlatButton}"></Button>
                 </Grid>
-                <TextBox materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-                <PasswordBox materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"></PasswordBox>
-                <PasswordBox materialDesign:HintAssist.Hint="Повторите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
-                <TextBox materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-                <Button Content="Зарегистрироваться" Margin="0 20 0 20" Background="#707ED7"></Button>
+                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+                <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"></PasswordBox>
+                <PasswordBox x:Name="passBox_2" materialDesign:HintAssist.Hint="Повторите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+                <Button Content="Зарегистрироваться" Margin="0 20 0 20" Background="#707ED7" Click="Button_Reg_Click"/>
             </StackPanel>
         </Border>
     </Grid>
