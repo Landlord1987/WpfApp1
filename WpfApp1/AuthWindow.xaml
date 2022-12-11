@@ -7,6 +7,20 @@
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Ferrum" Height="450" Width="700" WindowStyle="ThreeDBorderWindow" Cursor="AppStarting">
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard TargetProperty="Width" TargetName="authButton">
+                        <DoubleAnimation From="450" To="0"
+                                         AutoReverse="True"
+                                         RepeatBehavior="4x"
+                                         Duration="0:0:3"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Window.Triggers>
     <Grid Background="#707ED7" Cursor="SizeNS">
         <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
             <Border.Effect>
@@ -22,7 +36,7 @@
                 <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
                 <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"></PasswordBox>
 
-                <Button Content="Войти в кабинет" Margin="0 20 0 20" Background="#707ED7" Click="Button_Auth_Click"/>
+                <Button x:Name="authButton" Content="Войти в кабинет" Margin="0 20 0 20" Background="#707ED7" Click="Button_Auth_Click"/>
             </StackPanel>
         </Border>
     </Grid>

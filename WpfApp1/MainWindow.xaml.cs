@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace WpfApp1
 {
@@ -29,7 +30,11 @@ namespace WpfApp1
 
             db = new AppContext();
 
-           
+            DoubleAnimation btnAnimation = new DoubleAnimation();
+            btnAnimation.From = 0;
+            btnAnimation.To = 450;
+            btnAnimation.Duration = TimeSpan.FromSeconds(3);
+            regButton.BeginAnimation(Button.WidthProperty, btnAnimation);
         }
 
         private void Button_Reg_Click(object sender, RoutedEventArgs e)
