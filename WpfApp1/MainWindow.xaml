@@ -14,6 +14,7 @@
             </Border.Effect>
             <StackPanel>
                 <TextBlock Text="Регистрация Феррумчан!" FontSize="30" FontWeight="Black" Margin="0 0 0 20" Foreground="#707ED7"></TextBlock>
+                <TextBlock x:Name="ExampleText" Text="Регистрация Феррумчан!" FontWeight="Black" Margin="0 0 0 20" Foreground="#707ED7"></TextBlock>
 
                 <Grid Margin="0 0 0 20">
                     <Button HorizontalAlignment="Left" Content="Регистрация" Background="#707ED7"></Button>

@@ -20,9 +20,22 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        AppContext db;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            db = new AppContext();
+
+            List<User> users = db.Users.ToList();
+            string str = "";
+            foreach (User user in users)
+            {
+                str += "Login: " + user.Login + " | ";
+            }
+            ExampleText.Text= str;
         }
 
         private void Button_Reg_Click(object sender, RoutedEventArgs e)
@@ -64,6 +77,10 @@ namespace WpfApp1
                 textBoxEmail.Background = Brushes.Transparent;
 
                 MessageBox.Show("Все хорошо");
+
+                User user = new User(login, email, pass);
+                db.Users.Add(user);
+                db.SaveChanges();
             }
         }
     }
