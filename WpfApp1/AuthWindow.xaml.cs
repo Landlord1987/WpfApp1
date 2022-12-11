@@ -53,10 +53,22 @@ namespace WpfApp1
                 }
 
                 if (authUser != null)
+                {
                     MessageBox.Show("Все хорошо");
+                    UserPageWindow userPageWindow = new UserPageWindow();
+                    userPageWindow.Show();
+                    Hide();
+                }
                 else MessageBox.Show("Вы ввели что то неккорректно");
 
             }
+        }
+
+        private void Button_Reg_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Hide();
         }
     }
 }

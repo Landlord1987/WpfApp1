@@ -37,5 +37,10 @@ namespace WpfApp1
             this.email = email;
             this.pass = pass;
         }
+
+        /*public override string ToString()
+        {
+            return "Пользователь: " + Login + ". Email: " + Email;
+        }*/
     }
 }

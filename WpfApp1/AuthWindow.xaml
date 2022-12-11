@@ -16,7 +16,7 @@
                 <TextBlock Text="Авторизация Феррумчан!" FontSize="30" FontWeight="Black" Margin="0 0 0 20" Foreground="#707ED7"></TextBlock>
 
                 <Grid Margin="0 0 0 20">
-                    <Button HorizontalAlignment="Left" Content="Регистрация" Background="#707ED7"></Button>
+                    <Button HorizontalAlignment="Left" Content="Регистрация" Background="#707ED7" Click="Button_Reg_Click"></Button>
                     <Button HorizontalAlignment="Right" Content="Войти" Foreground="#707ED7" Style="{StaticResource MaterialDesignFlatButton}"></Button>
                 </Grid>
                 <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
