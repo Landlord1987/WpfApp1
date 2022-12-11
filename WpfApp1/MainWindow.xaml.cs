@@ -29,13 +29,7 @@ namespace WpfApp1
 
             db = new AppContext();
 
-            List<User> users = db.Users.ToList();
-            string str = "";
-            foreach (User user in users)
-            {
-                str += "Login: " + user.Login + " | ";
-            }
-            ExampleText.Text= str;
+           
         }
 
         private void Button_Reg_Click(object sender, RoutedEventArgs e)
